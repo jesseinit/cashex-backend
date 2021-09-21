@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  cashex-api:
+    build: .
+    image: cashex-api
+    container_name: cashex-api
+    restart: unless-stopped
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/cashex-api
+    depends_on:
+      - cashex-redis
+
+  cashex-redis:
+    image: redis:5
+    container_name: cashex-redis
+    restart: unless-stopped
+    ports:
+      - '6378:6379'
+    volumes:
+      - ./cashex_redis:/data
+
+  cashex-db:
+    restart: always
+    image: postgres:12
+    container_name: cashex-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cashex_db
+    volumes:
+      # Create these volumes on the project root directory
+      - ./cashex_db:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'

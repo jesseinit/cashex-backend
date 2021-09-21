@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{page_title}}</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      body {
+        background: #f2f2f2;
+        font-family: 'Poppins';
+      }
+
+      .header {
+        margin-bottom: 15px;
+      }
+
+      .content {
+        font-size: 1.2em;
+      }
+
+      .mobile-hint {
+        background-color: white;
+        color: #848688;
+        padding: 1% 10%;
+        font-size: 1em;
+      }
+
+      .mobile-link {
+        color: #7594fb;
+        text-decoration: none;
+      }
+
+      .link_text {
+        color: #fff;
+        padding: 0 10px;
+      }
+
+      .content-container {
+        padding: 2% 5%;
+        min-width: 320px;
+        max-width: 780px;
+        margin: 10px auto;
+      }
+
+      .header__logo {
+        margin-left: -10px;
+        width: 100px;
+      }
+
+      .mb-10 {
+        margin-bottom: 10px;
+      }
+
+      .mb-20 {
+        margin-bottom: 20px;
+      }
+
+      .mb-25 {
+        margin-bottom: 25px;
+      }
+
+      .main__greet-text {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+      }
+
+      .main__content p {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+      }
+
+      .footer__contact_details {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+      }
+
+      .footer__mobile-links {
+        font-size: 0.8em;
+      }
+
+      .footer__icons_container {
+        margin-bottom: 5px;
+      }
+
+      .footer__icon {
+        margin-right: 5px;
+      }
+
+      .link-button__default {
+        margin-top: 25px;
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      .link-button__accept {
+        background: #7594fb;
+        border-radius: 30px;
+        padding: 10px 15px;
+        margin-right: 5px;
+        color: #fff !important;
+      }
+
+      .link-button__reject {
+        color: #ef5c7e !important;
+      }
+
+      .parent-table {
+        white-space: wrap;
+      }
+
+      .current-user--index {
+        margin-right: 5px;
+      }
+
+      .current-user--badge {
+        background: #ef5c7e;
+        color: #fff;
+        margin-left: 2px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-size: 0.7rem;
+        box-shadow: 0 0 15px #b8b8b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">{% block inner_content %} {% endblock inner_content %}</div>
+  </body>
+</html>
